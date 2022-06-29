@@ -8,10 +8,18 @@
 </head>
 <body>
     <h1>Welcome to PetFax</h1>
+<div>
     {% for pet in pets %}
+    <div>
         <h2>{{ pet.pet_name }}</h2>
         <h2>{{ pet.pet_fact }}</h2>
         <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+        <a href="/pets/{{ pet.pet_id }}">Learn more</a>
+    </div>
     {% endfor %}
+</div>
+<div>
+    Click here to add more fun facts! <a href="/facts/new">Submit facts here!</a>
+</div>
 </body>
 </html>
